@@ -6,7 +6,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 let dnd = axios.create({
-  baseURL: 'http://www.dnd5eapi.co/api',
+  baseURL: 'https://www.dnd5eapi.co/api',
   timeout: 2000
 })
 
