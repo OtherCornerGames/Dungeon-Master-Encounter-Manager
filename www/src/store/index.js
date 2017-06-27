@@ -16,13 +16,13 @@ let dndblank = axios.create({
 })
 
 let api = axios.create({
-  baseURL: '//localhost:3000/api/',
+  baseURL: 'https://dmem.herokuapp.com/api/',
   timeout: 2000,
   withCredentials: true
 })
 
 let auth = axios.create({
-  baseURL: '//localhost:3000/',
+  baseURL: 'https://dmem.herokuapp.com/',
   timeout: 2000,
   withCredentials: true
 })
