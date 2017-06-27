@@ -1,0 +1,711 @@
+
+body {
+        background-image: linear-gradient(rgba(0, 0, 0, .6), #3D1600 ), url(/static/img/mapbackground.3536016.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+}
+button {
+        margin-top: 10px;
+        font-weight: bold;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1[data-v-3af1c65b]{
+  font-size: 50px;
+}
+.navbar[data-v-3af1c65b]{
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+}
+.dungeon[data-v-3af1c65b] {
+      color: #c70505;
+      font-family: 'Metal Mania';
+      text-shadow: 1px 1px 1px gold;
+}
+a[data-v-3af1c65b] {
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px rgba(100, 100, 100, 0);
+}
+.well[data-v-3af1c65b] {
+  color: whitesmoke;
+  text-align: left;
+  font-family: 'Asap', sans-serif;
+  font-weight: bolder;
+  background-color: rgba(61, 22, 0, .3);
+  border-color: rgba(100, 100, 100, 0);
+}
+
+
+button[data-v-1d775870] {
+  color: #333;
+}
+h1[data-v-1d775870] {
+  text-align: center;
+  font-size: 50px;
+}
+.navbar[data-v-1d775870] {
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+}
+.list-group-item[data-v-1d775870] {
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+}
+.list-group-item[data-v-1d775870]:hover {
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+}
+.dungeon[data-v-1d775870] {
+  color: #c70505;
+  font-family: 'Metal Mania';
+  text-shadow: 1px 1px 1px gold;
+}
+a[data-v-1d775870] {
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px rgba(100, 100, 100, 0);
+}
+.well[data-v-1d775870] {
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+  font-family: 'Asap', sans-serif;
+}
+h6[data-v-1d775870] {
+  color: #333
+}
+
+h1[data-v-77a9136a] {
+  font-size: 50px;
+}
+.navbar[data-v-77a9136a] {
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+}
+.dungeon[data-v-77a9136a] {
+  color: #c70505;
+  font-family: 'Metal Mania';
+  text-shadow: 1px 1px 1px gold;
+  text-align: center;
+}
+.encounter[data-v-77a9136a] {
+  color: black;
+}
+.tabrow[data-v-77a9136a] {
+  min-height: 100px;
+}
+.initrow[data-v-77a9136a] {
+  min-height: 100px;
+}
+.chars[data-v-77a9136a] {
+  min-height: 100px;
+}
+.modal-mask[data-v-77a9136a] {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, .33);
+  display: table;
+  transition: opacity .3s ease;
+  color: black;
+}
+.modal-wrapper[data-v-77a9136a] {
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-container[data-v-77a9136a] {
+  width: 900px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.modal-header h3[data-v-77a9136a] {
+  margin-top: 0;
+  color: #42b983;
+}
+.modal-body[data-v-77a9136a] {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+.modal-default-button[data-v-77a9136a] {
+  float: right;
+}
+
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+.modal-enter[data-v-77a9136a] {
+  opacity: 0;
+}
+.modal-leave-active[data-v-77a9136a] {
+  opacity: 0;
+}
+.modal-enter .modal-container[data-v-77a9136a],
+.modal-leave-active .modal-container[data-v-77a9136a] {
+  transform: scale(1.1);
+}
+.modal-wrapper[data-v-77a9136a] {
+  height: 90%;
+}
+.modal-body[data-v-77a9136a] {
+  overflow: scroll;
+}
+.well[data-v-77a9136a] {
+  min-height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tiny[data-v-e0afe5be] {
+  max-height: 30px;
+  max-width: auto
+}
+input[data-v-e0afe5be] {
+  max-width: 40px;
+}
+#wpn[data-v-e0afe5be] {
+  padding-left: 20px;
+}
+#end[data-v-e0afe5be] {
+  min-height: 50px;
+  padding-left: 30px;
+}
+#end2[data-v-e0afe5be] {
+  padding-left: 5px;
+}
+.int[data-v-e0afe5be] {
+  padding-left: 20px;
+}
+.lvl[data-v-e0afe5be] {
+  padding-left: 10px;
+}
+.hea[data-v-e0afe5be] {
+  padding-left: 30px;
+}
+.hea2[data-v-e0afe5be] {
+  padding-left: 30px;
+}
+.ac[data-v-e0afe5be] {
+  padding-left: 35px;
+}
+.ac2[data-v-e0afe5be] {
+  padding-left: 34px;
+  min-height: 50px;
+}
+.spe[data-v-e0afe5be] {
+  padding-left: 18px;
+}
+.titleS[data-v-e0afe5be] {
+  padding-left: 17px;
+}
+.titleD[data-v-e0afe5be] {
+  padding-left: 17px;
+}
+.titleCN[data-v-e0afe5be] {
+  padding-left: 17px;
+}
+.titleW[data-v-e0afe5be] {
+  padding-left: 19px;
+}
+.titleI[data-v-e0afe5be] {
+  padding-left: 21px;
+}
+.titleCH[data-v-e0afe5be] {
+  padding-left: 19px;
+}
+.shifty[data-v-e0afe5be] {
+  padding-left: 25px;
+  min-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1[data-v-186ab3aa] {
+  font-size: 50px;
+}
+.navbar[data-v-186ab3aa] {
+  background-color: rgba(100, 100, 100, 0);
+  border-color: rgba(100, 100, 100, 0);
+}
+.dungeon[data-v-186ab3aa] {
+  color: #c70505;
+  font-family: 'Metal Mania';
+  text-shadow: 1px 1px 1px gold;
+  text-align: center;
+}
+.encounter[data-v-186ab3aa] {
+  color: black;
+}
+.tabrow[data-v-186ab3aa] {
+  min-height: 100px;
+}
+.initrow[data-v-186ab3aa] {
+  min-height: 100px;
+}
+.chars[data-v-186ab3aa] {
+  min-height: 100px;
+}
+.modal-mask[data-v-186ab3aa] {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, .33);
+  display: table;
+  transition: opacity .3s ease;
+  color: black;
+}
+.modal-wrapper[data-v-186ab3aa] {
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-container[data-v-186ab3aa] {
+  width: 900px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.modal-header h3[data-v-186ab3aa] {
+  margin-top: 0;
+  color: #42b983;
+}
+.modal-body[data-v-186ab3aa] {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+.modal-default-button[data-v-186ab3aa] {
+  float: right;
+}
+
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+.modal-enter[data-v-186ab3aa] {
+  opacity: 0;
+}
+.modal-leave-active[data-v-186ab3aa] {
+  opacity: 0;
+}
+.modal-enter .modal-container[data-v-186ab3aa],
+.modal-leave-active .modal-container[data-v-186ab3aa] {
+  transform: scale(1.1);
+}
+.modal-wrapper[data-v-186ab3aa] {
+  height: 90%;
+}
+.modal-body[data-v-186ab3aa] {
+  overflow: scroll;
+}
+.well[data-v-186ab3aa] {
+  min-height: 300px;
+}
+
+.dungeon[data-v-60b1dd3e] {
+    color: #c70505;
+    font-family: 'Metal Mania';
+    text-shadow: 1px 1px 1px gold;
+}
+.jumbotron[data-v-60b1dd3e] {
+    background-color: rgba(200, 200, 200, 0);
+}
+h1[data-v-60b1dd3e] {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+input[data-v-60b1dd3e] {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+span[data-v-60b1dd3e] {
+    text-align: left;
+}
+.well.custom-well-small[data-v-60b1dd3e] {
+    width: 335px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: rgba(100, 100, 100, 0);
+}
+h2[data-v-60b1dd3e] {
+    text-align: center;
+}
+a[data-v-60b1dd3e] {
+    color: #c70505;
+    text-shadow: .1px .1px .1px gold;
+}
+a[data-v-60b1dd3e]:hover {
+    color: red;
+}    
+
+.jumbotron[data-v-fd9f004a]{
+    background-color: rgba(100, 100, 100, 0);
+    border-color: rgba(100, 100, 100, 0);
+}
+.dungeon[data-v-fd9f004a] {
+    color: #c70505;
+    font-family: 'Metal Mania';
+    text-shadow: 1px 1px 1px gold
+}
+h1[data-v-fd9f004a] {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+h2[data-v-fd9f004a] {
+    text-align: center;
+    font-weight: bold;
+}
+button[data-v-fd9f004a] {
+    margin-top: 10px;
+    font-weight: bold;
+}
+span[data-v-fd9f004a] {
+    text-align: left;
+}
+.well.custom-well-small[data-v-fd9f004a] {
+    width: 335px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: rgba(100, 100, 100, 0);
+}
+a[data-v-fd9f004a] {
+    color: #c70505;
+    text-shadow: .1px .1px .1px gold;
+}
+a[data-v-fd9f004a]:hover {
+    color: red;
+}
+
+/*# sourceMappingURL=app.fc056331a3894b23fa3a38d8016dafc5.css.map*/
