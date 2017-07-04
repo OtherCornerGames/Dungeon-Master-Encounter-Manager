@@ -469,25 +469,40 @@ export default {
     }
   },
   methods: {
-    endEncounter(){
+    endEncounter() {
       for (var index = 0; index < this.$store.state.removeCharacters.length; index++) {
         var character = this.$store.state.removeCharacters[index]
         this.$store.dispatch('removeCharacter', character)
       }
       this.$store.state.removeCharacters = []
     },
-    getCharacters(){
+    getCharacters() {
       this.$store.dispatch("getCharacters", this.$route.params.id)
-      this.$store.state.removeCharacters = []      
+      this.$store.state.removeCharacters = []
     },
     getSpell(spell) {
-      this.$store.dispatch("getSpell", spell)
+      var id = ''
+      for (var i = 34; i < spell.url.length; i++) {
+        var char = spell.url[i];
+        id += char
+      }
+      this.$store.dispatch("getSpell", id)
     },
     getMonster(monster) {
-      this.$store.dispatch("getMonster", monster)
+      var id = ''
+      for (var i = 36; i < monster.url.length; i++) {
+        var char = monster.url[i];
+        id += char
+      }
+      this.$store.dispatch("getMonster", id)
     },
     getItem(item) {
-      this.$store.dispatch("getItem", item)
+      var id = ''
+      for (var i = 37; i < item.url.length; i++) {
+        var char = item.url[i];
+        id += char
+      }
+      this.$store.dispatch("getItem", id)
     },
     logout() {
       this.$store.dispatch('logout', this.user)
@@ -616,6 +631,7 @@ h1 {
 .modal-default-button {
   float: right;
 }
+
 
 
 /*

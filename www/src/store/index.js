@@ -5,16 +5,6 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-let dnd = axios.create({
-  baseURL: 'https://www.dnd5eapi.co/api',
-  timeout: 2000
-})
-
-let dndblank = axios.create({
-  baseURL: '',
-  timeout: 2000
-})
-
 let api = axios.create({
   baseURL: 'https://dmem.herokuapp.com/api/',
   timeout: 2000,
@@ -26,6 +16,18 @@ let auth = axios.create({
   timeout: 2000,
   withCredentials: true
 })
+
+// let api = axios.create({
+//   baseURL: '//localhost:3000/api/',
+//   timeout: 2000,
+//   withCredentials: true
+// })
+
+// let auth = axios.create({
+//   baseURL: '//localhost:3000/',
+//   timeout: 2000,
+//   withCredentials: true
+// })
 
 // REGISTER ALL DATA HERE
 let state = {
@@ -85,7 +87,7 @@ export default new Vuex.Store({
       state.user = user
     },
 
-    //DND5E setters
+    //api5E setters
 
     setMonsters(state, monsters) {
       state.monsters = monsters.results
@@ -291,35 +293,35 @@ export default new Vuex.Store({
     },
     //API Calls for DND5E
     getMonsters({ commit, dispatch }) {
-      dnd('/monsters')
+      api('/monsters')
         .then(res => {
           commit('setMonsters', res.data)
         })
         .catch(handleError)
     },
     getSpells({ commit, dispatch }) {
-      dnd('/spells')
+      api('/spells')
         .then(res => {
           commit('setSpells', res.data)
         })
         .catch(handleError)
     },
     getEquipment({ commit, dispatch }) {
-      dnd('/equipment')
+      api('/equipment')
         .then(res => {
           commit('setEquipment', res.data)
         })
         .catch(handleError)
     },
-    getItem({ commit, dispatch }, url) {
-      dndblank(url)
+    getItem({ commit, dispatch }, id) {
+      api('/equipment/' + id)
         .then(res => {
           commit('setActiveEquipment', res.data)
         })
         .catch(handleError)
     },
-    getMonster({ commit, dispatch }, url) {
-      dndblank(url)
+    getMonster({ commit, dispatch }, id) {
+      api('/monsters/' + id)
         .then(res => {
           commit('setActiveMonster', res.data)
         })
@@ -339,8 +341,8 @@ export default new Vuex.Store({
           dispatch('getCharacters', encounterId)
         })
     },
-    getSpell({ commit, dispatch }, url) {
-      dndblank(url)
+    getSpell({ commit, dispatch }, id) {
+      api('/spells/' + id)
         .then(res => {
           commit('setActiveSpell', res.data)
         })
