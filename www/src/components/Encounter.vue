@@ -18,7 +18,7 @@
       <!--MONSTERS TAB -->
       <div class="col-md-2">
         <button type="button" title="three heads == monster" class="btn btn-default" @click="showMonsters=true">
-          <img src="http://i44.photobucket.com/albums/f3/suhmantha/hydra_zpsgpfgg87j.png" alt="MONSTER">
+          <img src="../assets/hydra.png" alt="MONSTER">
         </button>
         <transition name="modal" v-if="showMonsters">
           <div class="modal-mask">
@@ -92,7 +92,7 @@
       <!--PLAYERS TAB -->
       <div class="col-md-2">
         <button type="button" title="swordwoman == playa" class="btn btn-default" @click="showPlayer=true">
-          <img src="http://i44.photobucket.com/albums/f3/suhmantha/swordwoman_zps1ej7mjd4.png" alt="PLAYER">
+          <img src="../assets/swordwoman.png" alt="PLAYER">
         </button>
         <transition name="modal" v-if="showPlayer">
           <div class="modal-mask">
@@ -147,7 +147,7 @@
       <!--WEAPONS TAB -->
       <div class="col-md-2">
         <button type="button" title="things that hurt == weapons" class="btn btn-default" @click="showWeapons=true">
-          <img src="http://i44.photobucket.com/albums/f3/suhmantha/sverd-i-fjell_zps1m8jlpma.png" alt="EQUIPMENT">
+          <img src="../assets/sverd-i-fjell.png" alt="EQUIPMENT">
         </button>
         <transition name="modal" v-if="showWeapons">
           <div class="modal-mask">
@@ -217,7 +217,7 @@
       <!--SPELLS TAB -->
       <div class="col-md-2">
         <button type="button" title="spell == mindblown" class="btn btn-default" @click="showSpells=true">
-          <img src="http://i44.photobucket.com/albums/f3/suhmantha/bolt-spell-cast_zpsi9di3iqo.png" alt="COVER">
+          <img src="../assets/bolt-spell-cast.png" alt="COVER">
         </button>
         <transition name="modal" v-if="showSpells">
           <div class="modal-mask">
@@ -278,7 +278,7 @@
       <!--CONDITIONS TAB -->
       <div class="col-md-2">
         <button type="button" title="condition: player != okay" class="btn btn-default" @click="showConditions=true">
-          <img src="http://i44.photobucket.com/albums/f3/suhmantha/internal-injury_zpsud0740dt.png" alt="CONDITION">
+          <img src="../assets/internal-injury.png" alt="CONDITION">
         </button>
         <transition name="modal" v-if="showConditions">
           <div class="modal-mask">
@@ -310,7 +310,7 @@
       <!--COVER TAB -->
       <div class="col-md-2">
         <button type="button" title="big rock == cover" class="btn btn-default" @click="showCover=true">
-          <img src="http://i44.photobucket.com/albums/f3/suhmantha/stone-pile_zpsp2lesxwg.png" alt="COVER">
+          <img src="../assets/stone-pile.png" alt="COVER">
         </button>
         <transition name="modal" v-if="showCover">
           <div class="modal-mask">
@@ -532,7 +532,7 @@ export default {
     },
     nameMonster(monsterName) {
       var monstersName
-      var names = ["Alden", "Alec", "Anton", "Arden", "Arlen", "Armand", "Arron", "Augustus", "Avery", "Benedict", "Bennett", "Branden", "Brendon", "Britt", "Broderick", "Carter", "Chadwick", "Chas", "Chet", "Colby", "Cole", "Cordell", "Dalton", "Damien", "Dante", "Darryl", "Darius", "Darron", "Darwin", "Dewitt", "Diego", "Dillon", "Dirk", "Domenic", "Donovan", "Dorian", "Dorsey", "Edison", "Elden", "Elvin", "Erich", "Galen", "Garret", "Gaston", "Gavin", "Gorgon", "Graham", "Hal", "Hank", "Harlan", "Hayden", "Herschel", "Hoyt", "Hunter", "Isaias", "Isaac", "Jacinto", "Jarred", "Jonas", "Kendrick", "Kyle", "Kennith", "Keven", "Leif", "Lenard", "Lincoln", "Linwood", "Lucius", "Sam", "Malcolm", "Malik", "Maxwell", "McKinley", "Merlin", "Merrill", "Michal", "Monty", "Newton", "Nathan", "Nolan", "Porter", "Quinton", "Raphael", "Reid", "Jason", "Scotty", "Seth", "Shad", "Stanton", "Stefan", "Thaddeus", "Tobias", "Trenton", "Vance", "Walker", "Walton", "Weldon", "Wes", "Weston", "Willian", "Winford", "Wyatt", "Zordon"]
+      var names = ["Alden", "Alec", "Anton", "Arden", "Arlen", "Armand", "Arron", "Augustus", "Avery", "Benedict", "Bennett", "Branden", "Brendon", "Britt", "Broderick", "Carter", "Chadwick", "Chas", "Chet", "Colby", "Cole", "Cordell", "Dalton", "Damien", "Dante", "Darryl", "Darius", "Darron", "Darwin", "Dewitt", "Diego", "Dillon", "Dirk", "Domenic", "Donovan", "Dorian", "Dorsey", "Edison", "Elden", "Elvin", "Erich", "Galen", "Garret", "Gaston", "Gavin", "Gorgon", "Graham", "Hal", "Hank", "Harlan", "Hayden", "Herschel", "Hoyt", "Hunter", "Isaias", "Isaac", "Jacinto", "Jarred", "Jonas", "Kendrick", "Kyle", "Kennith", "Keven", "Leif", "Lenard", "Lincoln", "Linwood", "Lucius", "Sam", "Malcolm", "Malik", "Maxwell", "McKinley", "Merlin", "Merrill", "Michal", "Monty", "Newton", "Nathan", "Nolan", "Oni", "Porter", "Quinton", "Raphael", "Reid", "Jason", "Scotty", "Seth", "Shad", "Stanton", "Stefan", "Thaddeus", "Tobias", "Trenton", "Vance", "Walker", "Walton", "Weldon", "Wes", "Weston", "Willian", "Winford", "Wyatt", "Zordon"]
       var randomName;
       function getRandomName(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
