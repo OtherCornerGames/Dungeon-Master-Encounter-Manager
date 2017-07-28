@@ -105,7 +105,7 @@
             <div class="col-md-12">
               <div @click="openArmor">
                 <a class="size">
-                  <img src="https://farm5.staticflickr.com/4316/35360194133_27c76ed6b8_s.jpg" alt="AC">
+                  <img src="../assets/rosa-shieldSMALL.png" alt="AC">
                 </a>
               </div>
               <div v-show="showArmor">
@@ -134,7 +134,7 @@
           </div>
           <div class="row" id="wpn">
             <div @click="openWeapons">
-              <img src="https://farm5.staticflickr.com/4310/35360194343_87b2f64af0_s.jpg" alt="WEAPONS">
+              <img src="../assets/sverd-i-fjell.png" alt="WEAPONS">
             </div>
             <div v-show="showWeapons">
               <!--THESE ARE POPULATING AS OBJ, OBJ, OBJ...MAY NOT BE ABLE TO USE THIS INFORMATION....-->
@@ -193,7 +193,7 @@
           <div class="row" id="end2">
             <div @click="removeCharacter(character)">
               <i>
-                <img class="tiny" src="http://i44.photobucket.com/albums/f3/suhmantha/skullDelete_zpsmswuacpy.png">
+                <img class="tiny" src="../assets/skullDelete.png">
               </i>
             </div>
           </div>
