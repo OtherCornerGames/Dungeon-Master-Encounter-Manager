@@ -560,6 +560,10 @@ h1 {
   font-size: 50px;
 }
 
+img {
+  width: 80%;
+}
+
 .navbar {
   background-color: rgba(100, 100, 100, 0);
   border-color: rgba(100, 100, 100, 0);

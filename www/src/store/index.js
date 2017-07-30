@@ -5,6 +5,9 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+//comment out api and auth for local testing
+//uncomment to push up for live changes
+
 let api = axios.create({
   baseURL: 'https://dmem.herokuapp.com/api/',
   timeout: 2000,
@@ -16,6 +19,10 @@ let auth = axios.create({
   timeout: 2000,
   withCredentials: true
 })
+
+
+//comment out to push up for live changes
+//uncomment for local testing
 
 // let api = axios.create({
 //   baseURL: '//localhost:3000/api/',

@@ -252,6 +252,10 @@ export default {
   max-width: auto
 }
 
+img {
+  width: 80%;
+}
+
 input {
   max-width: 40px;
 }
