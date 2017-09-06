@@ -5,38 +5,21 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-//comment out api and auth for local testing
-//uncomment to push up for live changes
+var production = !window.location.host.includes('localhost');
+var baseUrl = production ? '//dmem.herokuapp.com/' : '//localhost:3000/';
 
 let api = axios.create({
-  baseURL: 'https://dmem.herokuapp.com/api/',
+  baseURL: baseUrl + 'api/',
   timeout: 2000,
   withCredentials: true
 })
 
 let auth = axios.create({
-  baseURL: 'https://dmem.herokuapp.com/',
+  baseURL: baseUrl,
   timeout: 2000,
   withCredentials: true
 })
 
-
-//comment out to push up for live changes
-//uncomment for local testing
-
-// let api = axios.create({
-//   baseURL: '//localhost:3000/api/',
-//   timeout: 2000,
-//   withCredentials: true
-// })
-
-// let auth = axios.create({
-//   baseURL: '//localhost:3000/',
-//   timeout: 2000,
-//   withCredentials: true
-// })
-
-// REGISTER ALL DATA HERE
 let state = {
   characters: [],
   removeCharacters: [],
@@ -63,7 +46,6 @@ let handleError = (state, err) => {
 }
 
 export default new Vuex.Store({
-  // ALL DATA LIVES IN THE STATE
   state,
 
   mutations: {
