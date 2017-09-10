@@ -48,23 +48,23 @@
                         <div class="col-md-6">
                           <div class="row">
                             <div class="col-md-12">
-                              Name: {{monster.name}} --
-                              <br> Size: {{monster.size}} --
-                              <br> Armor Class: {{monster.armor_class}} --
-                              <br> Speed: {{monster.speed}} --
-                              <br> Hit Points: {{monster.hit_points}} --
-                              <br> Senses : {{monster.senses}} --
-                              <br> Challenge Rating: {{monster.challenge_rating}} --
-                              <br> Strength: {{monster.strength}} --
-                              <br> Dexterity: {{monster.dexterity}} --
-                              <br> Constitution: {{monster.constitution}} --
-                              <br> Intelligence: {{monster.intelligence}} --
-                              <br> Wisdom: {{monster.wisdom}} --
-                              <br> Charisma: {{monster.charisma}} --
-                              <br> Actions: {{monster.actions}}
+                              <strong>Name:</strong> {{monster.name}}
+                              <br> <strong>Size:</strong> {{monster.size}}
+                              <br> <strong>Armor Class:</strong> {{monster.armor_class}}
+                              <br> <strong>Speed:</strong> {{monster.speed}}
+                              <br> <strong>Hit Points:</strong> {{monster.hit_points}}
+                              <br> <strong>Senses:</strong> {{monster.senses}}
+                              <br> <strong>Challenge Rating:</strong> {{monster.challenge_rating}}
+                              <br> <strong>Strength:</strong> {{monster.strength}}
+                              <br> <strong>Dexterity:</strong> {{monster.dexterity}}
+                              <br> <strong>Constitution:</strong> {{monster.constitution}}
+                              <br> <strong>Intelligence:</strong> {{monster.intelligence}}
+                              <br> <strong>Wisdom:</strong> {{monster.wisdom}}
+                              <br> <strong>Charisma:</strong> {{monster.charisma}}
+                              <br> <strong>Actions:</strong> {{monster.actions}}
                               <form @submit.prevent="moveMonster">
                                 <div class="form-group">
-                                  <input type="text" class="form-control" :placeholder="monster.name">
+                                  <input type="text" class="form-control" v-model="customName" :placeholder="monster.name">
                                   <button class="btn but-default" @submit="moveMonster">Add Monster</button>
                                 </div>
                               </form>
@@ -386,6 +386,7 @@ export default {
       showConditions: false,
       showCover: false,
       monsterName: '',
+      customName: '',
       playerName: '',
       playerHealth: Number,
       spellName: '',
@@ -520,15 +521,16 @@ export default {
       return 0;
     },
     moveMonster() {
-      var tempMon = this.$store.state.activeMonster
+      debugger
+      var baseMonster = this.$store.state.activeMonster
       this.$store.state.tempMonster = this.$store.state.activeMonster
-      if (this.monsterName == '') {
-        this.nameMonster(this.monsterName)
+      if(this.customName == ''){
+      this.nameMonster(this.monsterName)
       }
       this.$store.state.tempMonster.name = this.monsterName
       this.$store.dispatch('moveMonster', this.encounter._id)
       this.monsterName = ''
-      this.getMonster(tempMon)
+      this.getMonster(baseMonster)
     },
     nameMonster(monsterName) {
       var monstersName
