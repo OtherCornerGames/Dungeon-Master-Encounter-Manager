@@ -67,11 +67,9 @@ export default new Vuex.Store({
     setPlayers(state, players) {
       state.players = players
     },
-
     setConditions(state, conditions) {
       state.conditions = conditions
     },
-
     setUser(state, user) {
       state.user = user
     },
@@ -87,16 +85,13 @@ export default new Vuex.Store({
       state.spells = spells.results
       console.log('spells:' + spells.count)
     },
-
     setEquipment(state, equipment) {
       state.equipment = equipment.results
       console.log('equipment:' + equipment.count)
     },
-
     setActiveEquipment(state, activeEquipment) {
       state.activeEquipment = activeEquipment
     },
-
     setActiveMonster(state, activeMonster) {
       state.activeMonster = activeMonster
       console.log(activeMonster)
@@ -120,12 +115,10 @@ export default new Vuex.Store({
         return 0;
       })
     },
-
     setHealth(state, data) {
       var charIndex = state.characters.indexOf(data.character)
       state.characters[charIndex].health += data.value
     }
-
   },
 
   // ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
@@ -230,9 +223,8 @@ export default new Vuex.Store({
         .catch(handleError)
     },
     movePlayers({ commit, dispatch }, player) {
-      api.post('./characters/' + player.encounterId, player)
+      api.post('/characters', player)
         .then(res => {
-          console.log(res.data.data)
           commit('setCharacters', res.data.data)
         })
       dispatch('getCharacters', player.encounterId)

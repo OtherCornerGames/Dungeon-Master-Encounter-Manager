@@ -166,7 +166,6 @@
       movePlayers(players, encounterId) {
         for (var i = 0; i < players.length; i++) {
           var player = players[i]
-          console.log(encounterId)
           player.encounterId = encounterId
           this.$store.dispatch("movePlayers", player)
         }
